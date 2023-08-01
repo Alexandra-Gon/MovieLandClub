@@ -1,0 +1,159 @@
+.homePageBackground {
+  background-color: rgb(16, 16, 34);
+  color: white;
+  min-height: 80vh;
+}
+.homePageContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .homePageContainer {
+    display: flex;
+    gap: 60px;
+  }
+}
+.moviesContainer {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .moviesContainer {
+    width: 80%;
+  }
+}
+
+/* BUTTON-CATEGORIES CONTAINER*/
+
+.homeButtonAndSearch {
+  margin-bottom: 20px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .homeButtonAndSearch {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0;
+  }
+}
+
+/* BUTTON-CATEGORIES*/
+
+.buttonCategoriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin: 0;
+}
+.buttonCategory {
+  background-color: rgb(10, 24, 83);
+  color: white;
+  width: 140px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buttonCategory:hover {
+  background-color: white;
+  color: black;
+}
+.categoryActive {
+  background-color: white;
+  color: black;
+}
+
+/* SEARCH-BAR*/
+
+.searchBarContainer {
+  background-color: white;
+  width: 100%;
+
+  border-radius: 20px;
+  height: 30px;
+  display: flex;
+  gap: 5px;
+}
+@media (min-width: 768px) {
+  .searchBarContainer {
+    width: 60%;
+  }
+}
+.searchBar {
+  width: 100%;
+  height: 30px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.searchBarButton {
+  border: none;
+  border-radius: 20px;
+}
+
+/* CARDS */
+
+.cardMoviesContainer {
+  padding-bottom: 30px;
+}
+@media (min-width: 480px) {
+  .cardMoviesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .cardMoviesContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .cardMoviesContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* ASIDE HOME */
+
+.asideBlogContainer {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .asideBlogContainer {
+    width: 20%;
+  }
+}
+.asideBlogTitle {
+  margin: 30px 0;
+}
+.asideBlogCard {
+  color: white;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.imageHomeBlog {
+  width: 100%;
+  padding: 10px 0;
+}
+.counterPages {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.buttonPagination {
+  background-color: white;
+  border: none;
+  border-radius: 70%;
+  margin-bottom: 20px;
+}

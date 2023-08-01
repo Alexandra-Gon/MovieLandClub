@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ddb28b86.css",
+    "main.js": "/static/js/main.1bb3a654.js",
+    "static/media/flash1.webp": "/static/media/flash1.fc3b5e694b6c7a24478b.webp",
+    "static/media/harryPotter1.webp": "/static/media/harryPotter1.6d2de05cfb162e22e902.webp",
+    "static/media/barbie1.webp": "/static/media/barbie1.e39efe9a37f60fd3abf7.webp",
+    "static/media/me.webp": "/static/media/me.c4dd50037521e6c04958.webp",
+    "static/media/insidius1.webp": "/static/media/insidius1.2e2fb38ecf402a718f2f.webp",
+    "static/media/logoMovie.png": "/static/media/logoMovie.fbbaf3cede7660c1ed6a.png",
+    "static/media/startRanking.png": "/static/media/startRanking.97c2ea30ac86fe94017b.png",
+    "index.html": "/index.html",
+    "main.ddb28b86.css.map": "/static/css/main.ddb28b86.css.map",
+    "main.1bb3a654.js.map": "/static/js/main.1bb3a654.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddb28b86.css",
+    "static/js/main.1bb3a654.js"
+  ]
+}
