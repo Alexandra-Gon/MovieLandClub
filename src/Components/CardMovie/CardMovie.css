@@ -1,9 +1,9 @@
 .cardMovie {
+  /* background-color: goldenrod; */
   background-color: rgb(10, 24, 83);
   color: white;
   width: 100%;
   height: 420px;
-  /* border: 1px solid black; */
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -12,17 +12,33 @@
   height: 300px;
   margin: 0 auto;
   padding-top: 20px;
+  text-decoration: none;
 }
 .cardImage {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
-.cardText {
-  padding: 20px 5px;
+.cardTextContainer {
+  padding: 20px 5px 5px 5px;
   font-size: 15px;
   color: white;
-  text-decoration: none;
   text-align: center;
+}
+.cardTextContainer h3 {
+  height: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.startCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.startCard {
+  width: 20px;
 }

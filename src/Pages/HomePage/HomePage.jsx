@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import CardMovie from "../../Components/CardMovie/CardMovie";
 import { MoviesContext } from "../../Context/Context";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-
-
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 
 const HomePage = () => {
   let {
@@ -16,23 +14,23 @@ const HomePage = () => {
     setSearchMovie,
     handleChange,
     changeCategory,
-    category
+    category,
   } = useContext(MoviesContext);
 
   const [numData, setNumData] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
   const nextData = () => {
-   if (currentPage < moviesData.length / 10) {
-    setNumData(numData + 10)
-    setCurrentPage(currentPage+1)
-   }
+    if (currentPage < moviesData.length / 10) {
+      setNumData(numData + 10);
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   const previusData = () => {
     if (currentPage > 1) {
-      setNumData(numData - 10)
-      setCurrentPage(currentPage-1)
+      setNumData(numData - 10);
+      setCurrentPage(currentPage - 1);
     }
   };
 
@@ -43,25 +41,41 @@ const HomePage = () => {
           <div className="homeButtonAndSearch">
             <div className="buttonCategoriesContainer">
               <button
-                className={ category === "now_playing" ? "buttonCategory categoryActive": "buttonCategory" }
+                className={
+                  category === "now_playing"
+                    ? "buttonCategory categoryActive"
+                    : "buttonCategory"
+                }
                 onClick={() => changeCategory("now_playing")}
               >
                 Now Playing
               </button>
               <button
-                className={ category === "popular" ? "buttonCategory categoryActive": "buttonCategory" }
+                className={
+                  category === "popular"
+                    ? "buttonCategory categoryActive"
+                    : "buttonCategory"
+                }
                 onClick={() => changeCategory("popular")}
               >
                 Popular
               </button>
               <button
-                className={ category === "top_rated" ? "buttonCategory categoryActive": "buttonCategory" }
+                className={
+                  category === "top_rated"
+                    ? "buttonCategory categoryActive"
+                    : "buttonCategory"
+                }
                 onClick={() => changeCategory("top_rated")}
               >
                 Top Rated
               </button>
               <button
-                className={ category === "upcoming" ? "buttonCategory categoryActive": "buttonCategory" }
+                className={
+                  category === "upcoming"
+                    ? "buttonCategory categoryActive"
+                    : "buttonCategory"
+                }
                 onClick={() => changeCategory("upcoming")}
               >
                 Upcoming
@@ -84,7 +98,7 @@ const HomePage = () => {
 
           <div className="cardMoviesContainer">
             {moviesData &&
-             moviesData.slice(numData, numData + 10).map((movie, i) => {
+              moviesData.slice(numData, numData + 10).map((movie, i) => {
                 return (
                   <CardMovie
                     key={i}
@@ -96,7 +110,19 @@ const HomePage = () => {
                 );
               })}
           </div>
+          <div className="counterPages">
+            <button className="buttonPagination" onClick={previusData}>
+              {" "}
+              <KeyboardArrowLeftIcon />{" "}
+            </button>
+            <p>{currentPage}</p> /<p>{moviesData.length / 10}</p>
+            <button className="buttonPagination" onClick={nextData}>
+              {" "}
+              <KeyboardArrowRightIcon />{" "}
+            </button>
+          </div>
         </div>
+
         <div className="asideBlogContainer">
           <h2 className="asideBlogTitle">MOVIES BLOG</h2>
 
@@ -138,32 +164,22 @@ const HomePage = () => {
               <h3>'Barbie: The Album' sweeps Amazon with its pink vinyl</h3>
             </div>
           </Link>
-
-          <div className="asideBlogCard">
-            <a href="/moviesblog#harryPotter">
+          <Link to="/moviesblog#barbie">
+            <div className="asideBlogCard">
               <img
                 className="imageHomeBlog"
                 src={require("../../images/harryPotter1.webp")}
                 alt="Barbie movie image"
               />
-            </a>
-            <h3>SPECIALSWhich Harry Potter character are you? find out</h3>
-            <p>
-              Personality test that will define which Harry Potter character
-              represents you.
-            </p>
-          </div>
+              <h3>SPECIALSWhich Harry Potter character are you? find out</h3>
+              <p>
+                Personality test that will define which Harry Potter character
+                represents you.
+              </p>
+            </div>
+          </Link>
         </div>
-      
       </div>
-      <div className="counterPages">
-
-          <button className="buttonPagination" onClick={previusData}> <KeyboardArrowLeftIcon/> </button>
-          <p>{currentPage}</p> / 
-          <p>{moviesData.length / 10}</p>
-          <button className="buttonPagination" onClick={nextData}> <KeyboardArrowRightIcon/> </button>
-
-        </div>
     </section>
   );
 };

@@ -2,12 +2,18 @@
   background-color: rgb(16, 16, 34);
 }
 .blogContainer {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   color: white;
 }
+@media (min-width: 760px) {
+  .blogContainer {
+    width: 60%;
+  }
+}
 .blogTitle {
   padding: 20px;
+  text-align: center;
 }
 .imageBlog {
   width: 100%;

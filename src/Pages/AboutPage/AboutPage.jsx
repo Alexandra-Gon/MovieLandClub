@@ -9,7 +9,7 @@ const AboutPage = () => {
       <div className="aboutContainer">
         <h1 className="aboutTitle">
           About <br />
-          Movies Land Club
+          Movie Land Club
         </h1>
         <div className="aboutMe">
           <div className="aboutMeImageContainer">

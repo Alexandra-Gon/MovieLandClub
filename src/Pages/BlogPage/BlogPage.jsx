@@ -3,7 +3,6 @@ import "./BlogPage.css";
 import BugReportIcon from "@mui/icons-material/BugReport";
 // import Video from "../../Components/Video/Video";
 
-
 const BlogPage = () => {
   return (
     <div className="blogBackground">
@@ -11,11 +10,11 @@ const BlogPage = () => {
         <h1 className="blogTitle">Blog Page</h1>
 
         <section id="flash" className="sectionContainer">
-          
           <h3 className="sectionBlogTitles">
             The Flash: DC's Speedy Multiverse
           </h3>
           <img
+            loading="lazy"
             className="imageBlog"
             src={require("../../images/flash1.webp")}
             alt="Flash movie image"
@@ -73,12 +72,12 @@ const BlogPage = () => {
         </section>
 
         <section id="insidius" className="sectionContainer">
-         
           <h3 className="sectionBlogTitles">
             Insidious: The Red Door Is the new installment of the horror
             franchise worth it?
           </h3>
           <img
+            loading="lazy"
             className="imageBlog"
             src={require("../../images/insidius1.webp")}
             alt="Insidius movie image"
@@ -127,9 +126,7 @@ const BlogPage = () => {
             funeral. Josh will try to connect with his son, who suffers typical
             adolescent traumas, before his departure.
             <br />
-           
-              {/* <Video videoId="ZuQuOnYnr3Q" /> */}
-           
+            {/* <Video videoId="ZuQuOnYnr3Q" /> */}
             And it is precisely Dalton who will assume the co-prominence of the
             story. As we explore his own subconscious through what he draws in
             his college classes, intermittently, we will be told the story of
@@ -152,11 +149,11 @@ const BlogPage = () => {
         </section>
 
         <section id="barbie" className="sectionContainer">
-         
           <h3 className="sectionBlogTitles">
             'Barbie: The Album' sweeps Amazon with its pink vinyl
           </h3>
           <img
+            loading="lazy"
             className="imageBlog"
             src={require("../../images/barbie1.webp")}
             alt="Barbie movie image"
@@ -210,11 +207,11 @@ const BlogPage = () => {
         </section>
 
         <section id="potter" className="sectionContainer">
-          
           <h3 className="sectionBlogTitles">
-            SPECIALSWhich Harry Potter character are you? find out
+            SPECIALS Which Harry Potter character are you? find out
           </h3>
           <img
+            loading="lazy"
             className="imageBlog"
             src={require("../../images/harryPotter1.webp")}
             alt="Barbie movie image"
